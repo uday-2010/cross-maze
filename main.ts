@@ -1,4 +1,4 @@
-scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.stairWest, function (sprite, location) {
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.doorClosedNorth, function (sprite, location) {
     game.over(true)
 })
 let uday = sprites.create(img`
@@ -21,6 +21,6 @@ let uday = sprites.create(img`
     `, SpriteKind.Player)
 controller.moveSprite(uday, 100, 100)
 tiles.setTilemap(tilemap`level1`)
-tiles.placeOnRandomTile(uday, sprites.dungeon.stairLadder)
+tiles.placeOnRandomTile(uday, sprites.dungeon.doorOpenWest)
 scene.cameraFollowSprite(uday)
-info.startCountdown(10)
+info.startCountdown(160)
